@@ -1,0 +1,7 @@
+.logo {
+    padding: 1em;
+    box-sizing: content-box;
+}
+.logo img {
+    width: 150px;
+}
