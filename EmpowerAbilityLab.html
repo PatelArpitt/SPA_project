@@ -21,17 +21,20 @@
                             <img src="./images/Picture1.png">
                         </div>
                     </a>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link" aria-current="page" href="#homeDiv">Home</a>
-                            <a class="nav-link" href="#servicesDiv">Services</a>
-                            <a class="nav-link" href="#scheduleCallDiv">Schedule a Call</a>
+                    <div class="container">
+                        <div class="navbar-nav btn">
+                            <a class="nav-link btn btn-warning active" href="#homepage" id="homeDivTab" aria-current="page"
+                                onclick="openTab('homeDiv')">Home</a>
+                            <a class="nav-link btn" href="#servicespage" id="servicesDivTab"
+                                onclick="openTab('servicesDiv')">Services</a>
+                            <a class="nav-link btn" href="#schedulecallpage" id="scheduleCallDivTab"
+                                onclick="openTab('scheduleCallDiv')">Schedule a Call</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="container mt-5" id="homeDiv">
+        <div class="container nav-tab mt-5" id="homeDiv">
             <div class="introduction">
                 <p>
                     Welcome to Empower Ability Labs, where innovation meets inclusivity to redefine accessibility for
@@ -45,9 +48,37 @@
                     possibilities.
                 </p>
             </div>
-            <button class="btn btn-warning mt-2">
+            <button class="btn btn-warning mt-2" onclick="openModal()" >
                 Meet the Empower Community
             </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3>Empower Community</h3>
+                    <p>How to Get Involved:<br>
+                        <b>Connect on Social Media:</b><br>
+                        Follow us on social media platforms to stay updated on the latest news, events, and community
+                        initiatives. Join the conversation and connect with like-minded individuals.
+                        <br>
+                        <b>Attend Empower Events:</b><br>
+                        Explore our events calendar and participate in workshops, webinars, and conferences that focus
+                        on accessibility, inclusion, and the latest advancements in assistive technologies.
+                        <br>
+                        <b>Contribute Your Expertise:</b><br>
+                        Are you a designer, developer, or advocate with a passion for inclusivity? Explore opportunities
+                        to contribute your skills and collaborate on projects that make a real impact.
+                        <br>
+                        <b>Share Your Story:</b><br>
+                        We believe in the power of stories. Share your experiences, challenges, and triumphs to inspire
+                        others and contribute to a more inclusive narrative.
+                        <br>
+                        <br>
+                        Empower Ability Labs is more than a community; it's a movement. Join us in shaping a world where
+                        accessibility knows no bounds, and every individual, regardless of ability, is empowered to
+                        thrive. Together, we can make a difference. Welcome to the Empower community!
+                    </p>
+                </div>
+            </div>
             <div class="container mt-3">
                 <div class="row">
                     <div class="col">
@@ -89,10 +120,10 @@
             </div>
 
         </div>
-        <div class="container mt-5" id="servicesDiv">
+        <div class="container nav-tab mt-5" id="servicesDiv" style="display:none">
             <div class="container">
                 <div class="row">
-                    <div class="col-8 gx-5">
+                    <div class="col-8 col-sm-6 gx-5">
                         <p class="h4">
                             About Services
                         </p>
@@ -103,7 +134,7 @@
                             services we offer:
                         </p>
                     </div>
-                    <div class="col-4 gx-5">
+                    <div class="col-4 col-sm-6 gx-5">
                         <img src="./images/a11y_services.png"
                             alt="Photo describing symbols of Accessibility assistive services">
                     </div>
@@ -180,10 +211,80 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-5" id="scheduleCallDiv">
-
+        <div class="container nav-tab mt-5" id="scheduleCallDiv" style="display:none">
+            <div class="container">
+                <p class="h4">
+                    Schedule a Call with Empower Ability Labs
+                </p>
+                <p>
+                    Thank you for your interest in Empower Ability Labs! We are excited to connect with you and explore
+                    how
+                    our expertise can contribute to your journey towards a more accessible and inclusive environment.
+                    Please
+                    take a moment to fill out the form below, and our team will get in touch with you to schedule a
+                    personalized consultation:
+                </p>
+            </div>
+            <div class="container mt-5">
+                <p class="h3 text-success" id="formSubmitTrue" style="display: none;">
+                    Thank You for Scheduling a Call with us!
+                </p>
+                <p class="h3 text-danger" id="formSubmitFalse" style="display: none;">
+                    Oops! There is an error with the information submitted. Please check and schedule again.
+                </p>
+            </div>
+            <div class="container">
+                <form name="schedule_call" onsubmit="return checkForm()" action="javascript:void(0)" method="post">
+                    <div class="col-6">
+                        <div class="col">
+                            <label for="business_name">
+                                Business Name
+                            </label>
+                            <input type="text" id="business_name" name="business_name">
+                        </div>
+                        <div class="col">
+                            <label for="phone_number">
+                                Phone Number (613-123-1234)
+                            </label>
+                            <input type="number" id="phone_number" name="phone_number">
+                        </div>
+                        <div class="col">
+                            <label for="email">
+                                Email (required)
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <fieldset>
+                            <legend>
+                                What would you like to talk about
+                            </legend>
+                            <input type="checkbox" id="option1" name="option1" value="awareness">
+                            <label for="option1">Awareness lab days and workshops</label><br>
+                            <input type="checkbox" id="option2" name="option2" value="invite_speaker"
+                                onchange="checkboxValidate(this.checked)">
+                            <label for="option2">Invite a speaker with disabilites to your event</label><br>
+                            <input type="checkbox" id="option3" name="option3" value="usability">
+                            <label for="option3">Usability testing</label>
+                        </fieldset>
+                        <div class="row" id="tell_us_more_div" style="display: none;"><label for="tell_us_more">Tell us
+                                about your
+                                event</label><textarea id="tell_us_more" name="tell_us_more"></textarea></div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Receive email about updates and services</p>
+                        <button type="submit" class="btn btn-warning mt-2">
+                            Schedule a Call
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+    <script src="./EmpowerAbilityLab.js"></script>
+
 </body>
 
 </html>
