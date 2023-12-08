@@ -13,275 +13,258 @@
 
 <body>
     <div class="container">
-        <div class="header">
+        <div role="banner" class="header">
             <nav class="navigation navbar navbar-expand-lg bg-body-tertiary" role="navigation">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <div class="logo">
-                            <img src="./images/Picture1.png">
+                            <img src="./images/Picture1.png" alt="Empower Ability Lab Logo">
                         </div>
                     </a>
                     <div class="container">
                         <div class="navbar-nav btn">
-                            <a class="nav-link btn btn-warning active" href="#homepage" id="homeDivTab" aria-current="page"
-                                onclick="openTab('homeDiv')">Home</a>
+                            <a class="nav-link btn btn-warning active" href="#homepage" id="homeDivTab"
+                                aria-current="page" onclick="openTab('homeDiv')" role="link">Home</a>
                             <a class="nav-link btn" href="#servicespage" id="servicesDivTab"
-                                onclick="openTab('servicesDiv')">Services</a>
+                                onclick="openTab('servicesDiv')" role="link">Services</a>
                             <a class="nav-link btn" href="#schedulecallpage" id="scheduleCallDivTab"
-                                onclick="openTab('scheduleCallDiv')">Schedule a Call</a>
+                                onclick="openTab('scheduleCallDiv')" role="link">Schedule a Call</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="container nav-tab mt-5" id="homeDiv">
-            <div class="introduction">
-                <p>
-                    Welcome to Empower Ability Labs, where innovation meets inclusivity to redefine accessibility for
-                    the benefit of individuals with disabilities. At Empower Ability Labs, we are committed to
-                    pioneering advancements in accessibility systems, striving to create a world where everyone,
-                    regardless of their abilities, can navigate and engage with the environment with unprecedented
-                    ease.<br>
-                    Join us on a journey where innovation and empathy converge, as we work tirelessly to empower
-                    individuals with disabilities, championing a future where ability knows no bounds. Welcome to
-                    Empower Ability Labs - where accessibility meets innovation, transforming limitations into boundless
-                    possibilities.
-                </p>
-            </div>
-            <button class="btn btn-warning mt-2" onclick="openModal()" >
-                Meet the Empower Community
-            </button>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <h3>Empower Community</h3>
-                    <p>How to Get Involved:<br>
-                        <b>Connect on Social Media:</b><br>
-                        Follow us on social media platforms to stay updated on the latest news, events, and community
-                        initiatives. Join the conversation and connect with like-minded individuals.
-                        <br>
-                        <b>Attend Empower Events:</b><br>
-                        Explore our events calendar and participate in workshops, webinars, and conferences that focus
-                        on accessibility, inclusion, and the latest advancements in assistive technologies.
-                        <br>
-                        <b>Contribute Your Expertise:</b><br>
-                        Are you a designer, developer, or advocate with a passion for inclusivity? Explore opportunities
-                        to contribute your skills and collaborate on projects that make a real impact.
-                        <br>
-                        <b>Share Your Story:</b><br>
-                        We believe in the power of stories. Share your experiences, challenges, and triumphs to inspire
-                        others and contribute to a more inclusive narrative.
-                        <br>
-                        <br>
-                        Empower Ability Labs is more than a community; it's a movement. Join us in shaping a world where
-                        accessibility knows no bounds, and every individual, regardless of ability, is empowered to
-                        thrive. Together, we can make a difference. Welcome to the Empower community!
+        <main role="main" class="container">
+            <div class="container nav-tab mt-5" id="homeDiv">
+                <title>Empower Ability Lab - Home</title>
+                <div class="introduction">
+                    <p>
+                    <h1>Welcome to Empower Ability Labs!</h1><br>
+                    Empower Ability Labs is a hub for learning and empathy-building. We are on a mission to foster
+                    understanding and promote inclusive digital experiences for all. We offer a range of services
+                    designed
+                    to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you
+                    find answers on How do people with disabilities use technology and navigate the digital world? What
+                    tools do they employ?
                     </p>
                 </div>
-            </div>
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col">
-                        <p class="h5">Smart Mobility Solutions</p>
+                <button class="btn btn-warning mt-2" onclick="openModal()">
+                    Meet the Empower Community
+                </button>
+                <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
+                    aria-describedby="modalDescription">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h1>Community Steering Committee</h1>
                         <p>
-                            <i>Explore our cutting-edge smart mobility solutions designed to enhance the independence
-                                and freedom of individuals with mobility challenges. From intelligent wheelchair
-                                technologies to advanced navigation aids, learn how we're revolutionizing the way people
-                                with disabilities experience and navigate the world.</i>
+                            We get an aha! moments from product managers who try our services for the first time.<br>
+                            We offered many lab days, workshops and offered usability testing services to many companies
+                            and
+                            organizations including:<br>
+                            • McGill University<br>
+                            • Walmart.ca<br>
+                            • Apple.ca<br>
+                            • Google.ca<br>
+                            • Government of Canada<br>
                         </p>
-                        <a class="learnMoreLink" href="#">Learn More</a>
-                    </div>
-                    <div class="col">
-                        <p class="h5">
-                            Inclusive Communication Technologies
-                        </p>
-                        <p>
-                            <i>Discover our innovative communication technologies that break down communication barriers
-                                for those with speech and language disabilities. Explore adaptive communication devices,
-                                augmented reality interfaces, and other groundbreaking solutions that empower
-                                individuals to express themselves and engage with the world on their terms.</i>
-                        </p>
-                        <a class="learnMoreLink" href="#">Learn More</a>
-                    </div>
-                    <div class="col">
-                        <p class="h5">
-                            Accessible Environments Design
-                        </p>
-                        <p>
-                            <i>Delve into our commitment to creating universally accessible environments. Learn about
-                                our design principles and initiatives focused on making public spaces, digital
-                                interfaces, and everyday environments more inclusive. From tactile navigation systems to
-                                inclusive website design, explore how Empower Ability Labs is shaping a world where
-                                accessibility is seamlessly integrated into the fabric of society.</i>
-                        </p>
-                        <a class="learnMoreLink" href="#">Learn More</a>
                     </div>
                 </div>
-            </div>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col">
+                            <p class="h5">Our Approach</p>
+                            <p>
+                                <i>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote
+                                    empathy.
+                                    Our immersive workshops and lab days provide participants with a unique opportunity
+                                    to
+                                    step into the shoes of individuals with disabilities and navigate the world from
+                                    their
+                                    perspective.</i>
+                            </p>
+                            <a class="learnMoreLink"
+                                href="https://www.google.com/search/howsearchworks/our-approach/">Learn
+                                More</a>
+                        </div>
+                        <div class="col">
+                            <p class="h5">
+                                Services
+                            </p>
+                            <p>
+                                <i>Promote accessibility awareness and enhance the user experience.<br>
+                                    • Empathy lab days and workshops<br>
+                                    • Go beyond WCAG compliance!<br>
+                                    • Inspirational speakers.
+                                </i>
+                            </p>
+                            <a class="learnMoreLink" href="https://www.elevenways.be/en/services">Learn More</a>
+                        </div>
+                        <div class="col">
+                            <p class="h5">
+                                Testimonials
+                            </p>
+                            <p>
+                                <i>Invite a speaker with disabilities to share their unique journey. This captivating
+                                    addition to your upcoming event will offer insights that resonate, inspire, educate,
+                                    and
+                                    enrich your team's understanding of inclusion.</i>
+                            </p>
+                            <a class="learnMoreLink"
+                                href="https://dictionary.cambridge.org/us/dictionary/english/testimonial">Learn More</a>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-        <div class="container nav-tab mt-5" id="servicesDiv" style="display:none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-8 col-sm-6 gx-5">
-                        <p class="h4">
-                            About Services
-                        </p>
-                        <p>
-                            Welcome to Empower Ability Labs, where we are dedicated to providing a diverse range of
-                            cutting-edge services aimed at revolutionizing accessibility and empowering individuals with
-                            disabilities. Our commitment to innovation and inclusivity is reflected in the comprehensive
-                            services we offer:
-                        </p>
+            </div>
+            <div class="container nav-tab mt-5" id="servicesDiv" style="display:none">
+                <title>Empower Ability Lab - Services</title>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8 col-sm-6 gx-5">
+                            <p>
+                                Dedicated space or programs designed to cultivate empathy and understanding among
+                                individuals towards the challenges faced by people with disabilities in using technology
+                                and
+                                interacting with various environments.
+                            </p>
+                        </div>
+                        <div class="col-4 col-sm-6 gx-5">
+                            <img src="./images/a11y_services.png"
+                                alt="Photo describing symbols of Accessibility assistive services">
+                        </div>
                     </div>
-                    <div class="col-4 col-sm-6 gx-5">
-                        <img src="./images/a11y_services.png"
-                            alt="Photo describing symbols of Accessibility assistive services">
-                    </div>
-                </div>
-                <div class="servicesList mt-3">
-                    <div class="service">
-                        <p class="h5 mt-5">
-                            Accessibility Consultation:
-                        </p>
-                        <p>
-                            Our team of experts collaborates with businesses, organizations, and public spaces to assess
-                            and enhance their accessibility standards. We provide thorough consultations to identify
-                            potential barriers and deliver tailored recommendations for creating inclusive environments.
-                            Whether you're looking to improve physical spaces or digital interfaces, our consultations
-                            pave the way for a more accessible future.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <p class="h5 mt-5">
-                            Custom Assistive Technology Development:
-                        </p>
-                        <p>
-                            Empower Ability Labs specializes in the creation of bespoke assistive technologies tailored
-                            to the unique needs of individuals with disabilities. From personalized mobility solutions
-                            to adaptive communication devices, our team combines expertise in technology and empathy to
-                            design and develop innovative solutions that empower users and improve their quality of
-                            life.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <p class="h5 mt-5">
-                            Training and Workshops:
-                        </p>
-                        <p>
-                            Education is key to fostering a truly inclusive society. We offer training sessions and
-                            workshops on accessibility awareness, adaptive technology utilization, and inclusive design
-                            practices. Our engaging programs are designed for businesses, educators, and communities,
-                            equipping them with the knowledge and tools to create environments that embrace diversity
-                            and cater to the needs of all individuals.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <p class="h5 mt-5">
-                            Inclusive Design Services:
-                        </p>
-                        <p>
-                            Empower Ability Labs believes in the power of design to shape inclusive environments. Our
-                            inclusive design services cover everything from physical spaces to digital interfaces.
-                            Whether you're looking to create universally accessible websites, apps, or public spaces,
-                            our team is here to ensure that your design aligns with the principles of inclusivity,
-                            making your offerings accessible to everyone.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <p class="h5 mt-5">
-                            Accessibility Testing and Compliance:
-                        </p>
-                        <p>
-                            Ensuring your products and services meet accessibility standards is crucial. Our thorough
-                            accessibility testing services evaluate digital interfaces, products, and environments to
-                            guarantee compliance with industry standards and regulations. Stay ahead of the curve and
-                            make inclusivity a core part of your offerings with our comprehensive accessibility testing
-                            and compliance services.
-                        </p>
-                    </div>
-                    <div class="service">
-                        <p>
-                            At Empower Ability Labs, we go beyond providing services; we are on a mission to transform
-                            the landscape of accessibility, one innovation at a time. Contact us to explore how our
-                            services can empower your organization and contribute to a more inclusive and accessible
-                            future for all.
-                        </p>
+                    <div class="servicesList mt-3">
+                        <div class="service">
+                            <p class="h5 mt-5">
+                                Empathy Lab days and workshops
+                            </p>
+                            <p>
+                                The lab days and workshops typically provide hands-on experiences, simulations, and
+                                interactions with assistive technologies, tools, and scenarios that replicate the
+                                obstacles
+                                individuals with disabilities encounter daily.
+                            </p>
+                        </div>
+                        <div class="service">
+                            <p class="h5 mt-5">
+                                Inspirational speakers
+                            </p>
+                            <p>
+                                Invite a speaker with disabilities to take share their unique journey. This captivating
+                                addition to your upcoming event will offer insights that resonate, inspire, educate, and
+                                enrich your team collective understanding of inclusion.
+                            </p>
+                        </div>
+                        <div class="service">
+                            <p class="h5 mt-5">
+                                Usability testing
+                            </p>
+                            <p>
+                                Go beyond WCAG! Involve individuals with disabilities in usability testing to gather
+                                valuable insights for refining product strategy and identifying accessibility concerns
+                                at an
+                                early stage when solutions are more feasible and cost-effective. You have access to a
+                                diverse community of people with disabilities, who use various assistive technologies.
+                                With
+                                technical expertise ranging from novice to expert, our community can support your
+                                product
+                                lifecycle from user research, to design, to QA.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container nav-tab mt-5" id="scheduleCallDiv" style="display:none">
-            <div class="container">
-                <p class="h4">
-                    Schedule a Call with Empower Ability Labs
-                </p>
-                <p>
-                    Thank you for your interest in Empower Ability Labs! We are excited to connect with you and explore
-                    how
-                    our expertise can contribute to your journey towards a more accessible and inclusive environment.
-                    Please
-                    take a moment to fill out the form below, and our team will get in touch with you to schedule a
-                    personalized consultation:
-                </p>
-            </div>
-            <div class="container mt-5">
-                <p class="h3 text-success" id="formSubmitTrue" style="display: none;">
-                    Thank You for Scheduling a Call with us!
-                </p>
-                <p class="h3 text-danger" id="formSubmitFalse" style="display: none;">
-                    Oops! There is an error with the information submitted. Please check and schedule again.
-                </p>
-            </div>
-            <div class="container">
-                <form name="schedule_call" onsubmit="return checkForm()" action="javascript:void(0)" method="post">
-                    <div class="col-6">
-                        <div class="col">
-                            <label for="business_name">
-                                Business Name
-                            </label>
-                            <input type="text" id="business_name" name="business_name">
+            <div class="container nav-tab mt-5" id="scheduleCallDiv" style="display:none">
+                <title>Empower Ability Lab - Schedule a Call</title>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8 col-sm-6 gx-5">
+                            <p>
+                                At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive
+                                change
+                                through immersive experiences. Fill out the form below and we’ll get back to you as soon
+                                as
+                                we can to schedule a call with our sales team!
+                            </p>
                         </div>
-                        <div class="col">
-                            <label for="phone_number">
-                                Phone Number (613-123-1234)
-                            </label>
-                            <input type="number" id="phone_number" name="phone_number">
+                        <div class="col-4 col-sm-6 gx-5">
+                            <img src="./images/schedule_call.png"
+                                alt="Photo describing a person holding a cellphone">
                         </div>
-                        <div class="col">
-                            <label for="email">
-                                Email (required)
-                            </label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <fieldset>
-                            <legend>
-                                What would you like to talk about
-                            </legend>
-                            <input type="checkbox" id="option1" name="option1" value="awareness">
-                            <label for="option1">Awareness lab days and workshops</label><br>
-                            <input type="checkbox" id="option2" name="option2" value="invite_speaker"
-                                onchange="checkboxValidate(this.checked)">
-                            <label for="option2">Invite a speaker with disabilites to your event</label><br>
-                            <input type="checkbox" id="option3" name="option3" value="usability">
-                            <label for="option3">Usability testing</label>
-                        </fieldset>
-                        <div class="row" id="tell_us_more_div" style="display: none;"><label for="tell_us_more">Tell us
-                                about your
-                                event</label><textarea id="tell_us_more" name="tell_us_more"></textarea></div>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                        <p>Receive email about updates and services</p>
-                        <button type="submit" class="btn btn-warning mt-2">
-                            Schedule a Call
-                        </button>
                     </div>
-                </form>
+                </div>
+                <div class="container mt-5">
+                    <p class="h3 text-success" id="formSubmitTrue" style="display: none;">
+                        Thank You for Scheduling a Call with us!
+                    </p>
+                    <p class="h3 text-danger" id="formSubmitFalse" style="display: none;">
+                        Oops! There is an error with the information submitted. Please check and try again.
+                    </p>
+                </div>
+                <div class="container">
+                    <form name="schedule_call" onsubmit="return checkForm()" action="javascript:void(0)" method="post"
+                        role="form">
+                        <div class="col-6">
+                            <div class="col">
+                                <label for="business_name">
+                                    Business Name
+                                </label>
+                                <input type="text" id="business_name" name="business_name" role="textbox"
+                                    aria-label="Business Name">
+                            </div>
+                            <div class="col">
+                                <label for="phone_number">
+                                    Phone Number (613-123-1234)
+                                </label>
+                                <input type="number" id="phone_number" name="phone_number" role="textbox"
+                                    aria-label="Phone Number">
+                            </div>
+                            <div class="col">
+                                <label for="email">
+                                    Email (required)
+                                </label>
+                                <input type="email" id="email" name="email" required role="textbox" aria-label="Email"
+                                    aria-required="true">
+                            </div>
+                            <fieldset role="group" aria-labelledby="checkboxLabel">
+                                <legend id="checkboxLabel">
+                                    What would you like to talk about
+                                </legend>
+                                <input type="checkbox" id="option1" name="option1" value="awareness">
+                                <label for="option1">Awareness lab days and workshops</label><br>
+                                <input type="checkbox" id="option2" name="option2" value="invite_speaker"
+                                    onchange="checkboxValidate(this.checked)">
+                                <label for="option2">Invite a speaker with disabilites to your event</label><br>
+                                <input type="checkbox" id="option3" name="option3" value="usability">
+                                <label for="option3">Usability testing</label>
+                            </fieldset>
+                            <div class="row" id="tell_us_more_div" style="display: none;">
+                                <br><textarea id="tell_us_more" name="tell_us_more">text area</textarea><label
+                                    for="tell_us_more">Tell us
+                                    about your
+                                    event</label>
+                            </div>
+                            <label class="switch" for="toggleSwitch" aria-checked="true" tabindex="0">
+                                <input type="checkbox" id="toggleSwitch" checked>
+                                <span class="slider round" role="presentation"></span>
+                                <p id="toggleText">ON</p>
+                            </label>
+                            <p>Receive email about updates and services</p>
+                            <button type="submit" class="btn btn-warning mt-2">
+                                Schedule a Call
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
+
+    <footer role="contentinfo" class="footer mt-5">
+        <div class="container">
+            <p>&copy; Copyright Empower Ability Labs Inc 2023. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="./EmpowerAbilityLab.js"></script>
 
